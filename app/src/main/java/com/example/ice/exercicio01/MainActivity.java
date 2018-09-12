@@ -10,12 +10,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String tipoPessoa = "nome";
-    public static final String nomeProfessor =null;
-    //public static String contadorProfessor =null;
 
     private static int contadorProfessor =0;
-
+    private static int contadorAluno =0;
+    private static int contadorExterno =0;
 
     private static int REQUEST_CONTADOR_PROFESSOR = 1;
     private static int REQUEST_CONTADOR_ALUNO = 2;
@@ -88,10 +86,17 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (requestCode == MainActivity.REQUEST_CONTADOR_PROFESSOR && resultCode == Activity.RESULT_OK) {
-
             contadorProfessor++;
             textProfessor.setText(String.valueOf(contadorProfessor));
 
+        }else if (requestCode == MainActivity.REQUEST_CONTADOR_ALUNO && resultCode == Activity.RESULT_OK) {
+            contadorAluno++;
+            textAluno.setText(String.valueOf(contadorAluno));
+
+        }else if (requestCode == MainActivity.REQUEST_CONTADOR_EXTERNO && resultCode == Activity.RESULT_OK) {
+            contadorExterno++;
+            textExterno.setText(String.valueOf(contadorExterno));
+
         }
-  }
     }
+  }

@@ -20,7 +20,7 @@ public class ProfessorActivity extends AppCompatActivity {
 
     private EditText txtNome;
     private EditText txtSiap;
-    private static int contador=0;
+
 
 
     @Override
@@ -37,7 +37,7 @@ public class ProfessorActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent resultado = new Intent();
-                resultado.putExtra(MainActivity.nomeProfessor, txtNome.getText().toString());
+                //resultado.putExtra(MainActivity.nomeProfessor, txtNome.getText().toString());
                 setResult(Activity.RESULT_OK, resultado);
                 finish();
             }
